@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="ChengPing Lin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta name="rating" content="General" />
+    <base target="_self" />
+    <meta name="description" content="" />
+    <title>Todo List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google font setting -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="MainContainer">
+        <header>
+          <h1>Polo's Todo List</h1>
+        </header>
+
+        <form>
+          <input type="text" placeholder="Add your need" />
+          <input type="number" min="1" max="12" placeholder="M" required />
+          <input type="number" min="1" max="31" placeholder="D" required />
+          <button type="submit">Add</button>
+        </form>
+
+        <br />
+        <br />
+
+        <div class="sort">
+          <button>Sort By Time</button>
+        </div>
+
+        <section></section>
+      </div>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

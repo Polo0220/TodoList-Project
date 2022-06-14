@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Short Stack", cursive;
+}
+
+i {
+  pointer-events: none;
+}
+
+#app {
+  background: url("https://images.pexels.com/photos/301717/pexels-photo-301717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  width: 100%;
+  min-height: 720px;
+  padding: 10px 0;
+  height: 100%;
+}
+
+#MainContainer {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 500px;
+  background: url("https://images.unsplash.com/photo-1629968417850-3505f5180761?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80");
+  margin: 15px auto;
+  color: #d2750d;
+  font-family: "Cormorant", serif;
+  padding: 0 0 30px 0;
+  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 15%);
+}
+
+@media screen and (max-width: 1024px) {
+  #MainContainer {
+    max-width: 700px;
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #MainContainer {
+    max-width: 500px;
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  #MainContainer {
+    max-width: 350px;
+    min-height: 500px;
+  }
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    color: #545454;
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    h1 {
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 569px) {
+  header {
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input,
+  button {
+    padding: 0.25rem 0.5rem;
+    margin: 0.1rem;
+    font-size: 1.75rem;
+    background-color: #fff;
+    border: 2px solid #545454;
+  }
+
+  input[type="text"] {
+    width: 350px;
+  }
+
+  input[type="number"] {
+    width: 55px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 767px) {
+    input,
+    button {
+      font-size: 20px;
+    }
+
+    input[type="text"] {
+      width: 200px;
+    }
+
+    input[type="number"] {
+      width: 40px;
+    }
+  }
+
+  @media screen and (max-width: 569px) {
+    input,
+    button {
+      font-size: 16px;
+    }
+
+    input[type="text"] {
+      width: 180px;
+    }
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  button {
+    cursor: pointer;
+    background-color: #545454;
+    color: white;
+  }
+  button:hover {
+    background-color: #2f2f2f;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div.todo {
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0rem;
+    transition: all 0.1s ease;
+    border: 0px solid black;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 3%);
+
+    p {
+      color: #545454;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+
+    p.todo-text {
+      width: 66.7%;
+      justify-content: center;
+    }
+
+    p.todo-time {
+      width: 33.3%;
+      text-align: center;
+    }
+
+    button {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+
+    button.complete {
+      background-color: #704214;
+    }
+
+    button.complete:hover {
+      background-color: #4b2d0e;
+    }
+
+    button.trash {
+      background-color: #8b0000;
+    }
+
+    button.trash:hover {
+      background-color: #450000;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    div.todo {
+      min-width: 300px;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+div.sort {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+  button {
+    cursor: pointer;
+    background-color: #545454;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+  }
+
+  button:hover {
+    background-color: #2f2f2f;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.sort {
+    button {
+      font-size: 20px;
+    }
+  }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUP {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
